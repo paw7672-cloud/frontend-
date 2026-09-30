@@ -1,7 +1,7 @@
 import React from "react";
 import Bubble from "../assets/Bubble.jpg";
 
-function LastImage() {
+function Last() {
   return (
     <div
       className="
@@ -316,4 +316,4 @@ function LastImage() {
   );
 }
 
-export default LastImage;
+export default Last;

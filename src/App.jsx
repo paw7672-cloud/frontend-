@@ -12,7 +12,7 @@ import SecondPage from "./pages/SecondPage";
 import HeartPage from "./pages/HeartPage";
 import BallonPage from "./pages/BallonPage";
 import Cards from "./pages/Cards";
-import LastImage from "./pages/lastImage";
+import Last from "./pages/Last";
 
 
 
