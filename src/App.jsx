@@ -4,7 +4,6 @@ import {
   Route,
 } from "react-router-dom";
 
-
 import Footer from "./component/footer";
 
 import HomePage from "./pages/homePage";
@@ -13,7 +12,6 @@ import HeartPage from "./pages/heartPage";
 import BallonPage from "./pages/ballonPage";
 import Cards from "./pages/Cards";
 import Navbar from "./component/navbar";
-import Last from "./pages/Last";
 
 
 
