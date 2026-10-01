@@ -5,11 +5,11 @@ import {
 } from "react-router-dom";
 
 import Footer from "./component/footer";
+ import HomePage from "./pages/HomePage";
 
-import HomePage from "./pages/homePage";
 import SecondPage from "./pages/secondPage";
 import HeartPage from "./pages/heartPage";
-import BallonPage from "./pages/ballonPage";
+import BallonPage from "./pages/BallonPage";
 import Cards from "./pages/Cards";
 import Navbar from "./component/navbar";
 

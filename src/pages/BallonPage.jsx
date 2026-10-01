@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function BubblePage() {
+function BallonPage() {
   const [floating, setFloating] = useState(false);
 
   useEffect(() => {
@@ -491,4 +491,4 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
   );
 }
 
-export default BubblePage;
+export default BallonPage;
