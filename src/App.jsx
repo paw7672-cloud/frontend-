@@ -20,6 +20,13 @@ function App() {
       <Navbar />
 
       <main className="min-h-screen bg-black">
+    
+
+<HomePage />
+<SecondPage />
+<HeartPage />
+<BallonPage />
+<Cards />
 
         <Routes>
 
