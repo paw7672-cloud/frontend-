@@ -5,10 +5,10 @@ import {
 } from "react-router-dom";
 
 
-import Footer from "./component/Footer";
+import Footer from "./component/footer";
 
-import HomePage from "./pages/HomePage";
-import SecondPage from "./pages/SecondPage";
+import HomePage from "./pages/homePage";
+import SecondPage from "./pages/secondPage";
 import HeartPage from "./pages/heartPage";
 import BallonPage from "./pages/ballonPage";
 import Cards from "./pages/Cards";
