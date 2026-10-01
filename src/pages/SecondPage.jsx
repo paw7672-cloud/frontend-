@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Birthday from "../assets/birthday.jpg";
+import Birthday from "../assets/Birthday.jpg";
 
 function SecondPage() {
   const [hearts, setHearts] = useState([]);
