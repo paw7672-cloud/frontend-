@@ -1,5 +1,5 @@
 import React from "react";
-import Bubble from "../assets/bubble.jpg";
+import Bubble from "../assets/Bubble.jpg";
 
 function Last() {
   return (

@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 import Footer from "./component/Footer";
-import Navbar  from "./component/Navbar";
+import Navbar from "./component/Navbar";
 
 import HomePage from "./pages/HomePage";
 import SecondPage from "./pages/SecondPage";
