@@ -10,7 +10,7 @@ import BallonPage from "./pages/BallonPage";
 import Moments from "./pages/Moments";
 import Last from "./pages/Last";
 import Beautiful from "./pages/Beautiful";
-import Favourit from "./pages/favourit";
+import Favourit from "./pages/Favourit";
 
 function App() {
   return (
