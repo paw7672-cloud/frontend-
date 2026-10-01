@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 
+import Image6 from "../assets/Image6.jpg";
+import Image7 from "../assets/Image7.jpg";
+import Image4 from "../assets/Image4.jpg";
+
 function BallonPage() {
   const [floating, setFloating] = useState(false);
 
@@ -198,7 +202,7 @@ function BallonPage() {
           className="
             text-center
             text-5xl
-        font-[Montserrat]
+            font-[Montserrat]
             text-white
             drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]
 
@@ -206,9 +210,14 @@ function BallonPage() {
             md:text-5xl
           "
         >
-          Many many happy returns of the day<br/>
-May Ram Ji always bless you with happiness, peace, good health, and success in your life.
- May all your dreams come true and may you always keep smiling
+          Many many happy returns of the day
+          <br />
+
+          May Ram Ji always bless you with happiness, peace, good health, and success in your life.
+
+          <br />
+
+          May all your dreams come true and may you always keep smiling
         </h1>
 
 
@@ -220,7 +229,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
             text-white/60
           "
         >
-          Three little bubbles carrying three beautiful 
+          Three little bubbles carrying three beautiful
           messages for a very special person.
         </p>
 
@@ -259,6 +268,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                 w-64
                 items-center
                 justify-center
+                overflow-hidden
                 rounded-full
                 border
                 border-pink-300/30
@@ -279,6 +289,35 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
               "
             >
 
+              {/* IMAGE 6 */}
+
+              <img
+                src={Image6}
+                alt="Beautiful Memories"
+                className="
+                  absolute
+                  inset-0
+                  h-full
+                  w-full
+                  rounded-full
+                  object-cover
+                  opacity-70
+                "
+              />
+
+
+              {/* Dark image overlay */}
+
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  bg-black/30
+                "
+              />
+
+
               {/* Shine */}
 
               <div
@@ -286,6 +325,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                   absolute
                   left-12
                   top-8
+                  z-20
                   h-8
                   w-4
                   rounded-full
@@ -297,7 +337,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
 
               {/* Text */}
 
-              <div>
+              <div className="relative z-30">
 
                 <div className="mb-3 text-3xl">
                   ❤️
@@ -308,7 +348,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                 </h2>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
-                  Every beautiful moment 
+                  Every beautiful moment
                   becomes a memory.
                 </p>
 
@@ -333,6 +373,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                 w-64
                 items-center
                 justify-center
+                overflow-hidden
                 rounded-full
                 border
                 border-purple-300/30
@@ -353,6 +394,35 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
               "
             >
 
+              {/* IMAGE 7 */}
+
+              <img
+                src={Image7}
+                alt="Special Day"
+                className="
+                  absolute
+                  inset-0
+                  h-full
+                  w-full
+                  rounded-full
+                  object-cover
+                  opacity-70
+                "
+              />
+
+
+              {/* Dark image overlay */}
+
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  bg-black/30
+                "
+              />
+
+
               {/* Shine */}
 
               <div
@@ -360,6 +430,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                   absolute
                   left-12
                   top-8
+                  z-20
                   h-8
                   w-4
                   rounded-full
@@ -371,7 +442,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
 
               {/* Text */}
 
-              <div>
+              <div className="relative z-30">
 
                 <div className="mb-3 text-3xl">
                   ✨
@@ -382,7 +453,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                 </h2>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
-                  May your day be filled 
+                  May your day be filled
                   with happiness.
                 </p>
 
@@ -407,6 +478,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                 w-64
                 items-center
                 justify-center
+                overflow-hidden
                 rounded-full
                 border
                 border-cyan-300/30
@@ -427,6 +499,35 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
               "
             >
 
+              {/* IMAGE 4 */}
+
+              <img
+                src={Image4}
+                alt="Make a Wish"
+                className="
+                  absolute
+                  inset-0
+                  h-full
+                  w-full
+                  rounded-full
+                  object-cover
+                  opacity-70
+                "
+              />
+
+
+              {/* Dark image overlay */}
+
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-full
+                  bg-black/30
+                "
+              />
+
+
               {/* Shine */}
 
               <div
@@ -434,6 +535,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                   absolute
                   left-12
                   top-8
+                  z-20
                   h-8
                   w-4
                   rounded-full
@@ -445,7 +547,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
 
               {/* Text */}
 
-              <div>
+              <div className="relative z-30">
 
                 <div className="mb-3 text-3xl">
                   🎂
@@ -456,7 +558,7 @@ May Ram Ji always bless you with happiness, peace, good health, and success in y
                 </h2>
 
                 <p className="mt-3 text-sm leading-6 text-white/60">
-                  Close your eyes and 
+                  Close your eyes and
                   make a beautiful wish.
                 </p>
 

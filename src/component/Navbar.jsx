@@ -55,7 +55,7 @@ function Navbar() {
 
         {/* ================= DESKTOP NAV ================= */}
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-7 md:flex">
 
           {/* HOME */}
 
@@ -93,7 +93,7 @@ function Navbar() {
           </a>
 
 
-          {/* MOMENTS - SEPARATE ROUTE */}
+          {/* MOMENTS */}
 
           <Link
             to="/moments"
@@ -111,7 +111,7 @@ function Navbar() {
           </Link>
 
 
-          {/* BEAUTIFUL - SEPARATE ROUTE */}
+          {/* BEAUTIFUL */}
 
           <Link
             to="/beautiful"
@@ -126,6 +126,24 @@ function Navbar() {
             "
           >
             Beautiful ❤️
+          </Link>
+
+
+          {/* ================= FAVOURITE ================= */}
+
+          <Link
+            to="/favourit"
+            onClick={handleLinkClick}
+            className="
+              text-sm
+              font-medium
+              text-white/70
+              transition
+              duration-300
+              hover:text-pink-400
+            "
+          >
+            Favourite 💕
           </Link>
 
         </div>
@@ -207,6 +225,7 @@ function Navbar() {
                 border-white/10
                 pb-4
                 text-white/70
+                transition
                 hover:text-pink-400
               "
             >
@@ -224,6 +243,7 @@ function Navbar() {
                 border-white/10
                 pb-4
                 text-white/70
+                transition
                 hover:text-pink-400
               "
             >
@@ -241,6 +261,7 @@ function Navbar() {
                 border-white/10
                 pb-4
                 text-white/70
+                transition
                 hover:text-pink-400
               "
             >
@@ -258,6 +279,7 @@ function Navbar() {
                 border-white/10
                 pb-4
                 text-white/70
+                transition
                 hover:text-pink-400
               "
             >
@@ -265,7 +287,25 @@ function Navbar() {
             </Link>
 
 
-            {/* LAST */}
+            {/* FAVOURITE */}
+
+            <Link
+              to="/favourit"
+              onClick={handleLinkClick}
+              className="
+                border-b
+                border-white/10
+                pb-4
+                text-white/70
+                transition
+                hover:text-pink-400
+              "
+            >
+              Favourite 💕
+            </Link>
+
+
+            {/* GET STARTED */}
 
             <Link
               to="/last"
@@ -275,6 +315,7 @@ function Navbar() {
                 border-white/10
                 pb-4
                 text-white/70
+                transition
                 hover:text-pink-400
               "
             >

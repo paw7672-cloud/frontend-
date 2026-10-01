@@ -10,6 +10,7 @@ import BallonPage from "./pages/BallonPage";
 import Moments from "./pages/Moments";
 import Last from "./pages/Last";
 import Beautiful from "./pages/Beautiful";
+import Favourit from "./pages/favourit";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <SecondPage />
               <HeartPage />
               <BallonPage />
+              <Last/>
             </>
           }
         />
@@ -48,6 +50,10 @@ function App() {
           element={<Last />}
         />
 
+ <Route
+          path="/favourit"
+          element={<Favourit />}
+        />
       </Routes>
 
       <Footer />
