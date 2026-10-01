@@ -1,72 +1,38 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-
-import Footer from "./component/Footer";
 import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
 
 import HomePage from "./pages/HomePage";
 import SecondPage from "./pages/SecondPage";
 import HeartPage from "./pages/HeartPage";
 import BallonPage from "./pages/BallonPage";
 import Cards from "./pages/Cards";
+import Last from "./pages/Last";
 
 function App() {
   return (
-    <BrowserRouter>
+    <div className="min-h-screen bg-black">
 
+      {/* ================= NAVBAR ================= */}
       <Navbar />
 
-      <main className="min-h-screen bg-black">
-    
+      {/* ================= ALL PAGES ================= */}
 
-<HomePage />
-<SecondPage />
-<HeartPage />
-<BallonPage />
-<Cards />
+      <HomePage />
 
-        <Routes>
+      <SecondPage />
 
-          {/* HOME */}
-          <Route
-            path="/"
-            element={<HomePage />}
-          />
+      <HeartPage />
 
-          {/* MEMORIES */}
-          <Route
-            path="/memories"
-            element={<SecondPage />}
-          />
+      <BallonPage />
 
-          {/* MOMENTS */}
-          <Route
-            path="/moments"
-            element={<Cards />}
-          />
+      <Cards />
 
-          {/* BIRTHDAY */}
-          <Route
-            path="/birthday"
-            element={<BallonPage />}
-          />
+      <Last />
 
-          {/* HEART */}
-          <Route
-            path="/heart"
-            element={<HeartPage />}
-          />
-
-        </Routes>
-
-      </main>
-
+      {/* ================= FOOTER ================= */}
       <Footer />
 
-    </BrowserRouter>
+    </div>
   );
 }
 
