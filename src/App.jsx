@@ -12,6 +12,7 @@ import SecondPage from "./pages/SecondPage";
 import HeartPage from "./pages/heartPage";
 import BallonPage from "./pages/ballonPage";
 import Cards from "./pages/Cards";
+import Navbar from "./component/navbar";
 import Last from "./pages/Last";
 
 
@@ -30,7 +31,7 @@ function App() {
 <HeartPage />
 <BallonPage />
 <Cards />
-<LastImage/>
+
 
 
       {/* =========================
