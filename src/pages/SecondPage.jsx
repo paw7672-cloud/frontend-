@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Birthday from "../assets/Birthday.jpg";
+import Image5 from "../assets/Image5.jpg";
 
 function SecondPage() {
   const [hearts, setHearts] = useState([]);
@@ -22,7 +22,7 @@ function SecondPage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+    <div className="relative min-h-screen w-full overflow-hidden bg-black text-white">
 
       {/* =========================================
           BACKGROUND GLOW
@@ -32,13 +32,25 @@ function SecondPage() {
         className="
           pointer-events-none
           absolute
-          left-[-150px]
-          top-[-150px]
-          h-[450px]
-          w-[450px]
+          -left-24
+          -top-24
+          h-64
+          w-64
           rounded-full
           bg-pink-500/10
-          blur-[140px]
+          blur-[100px]
+
+          sm:-left-32
+          sm:-top-32
+          sm:h-80
+          sm:w-80
+          sm:blur-[120px]
+
+          md:-left-40
+          md:-top-40
+          md:h-[450px]
+          md:w-[450px]
+          md:blur-[140px]
         "
       />
 
@@ -46,27 +58,40 @@ function SecondPage() {
         className="
           pointer-events-none
           absolute
-          bottom-[-150px]
-          right-[-150px]
-          h-[450px]
-          w-[450px]
+          -bottom-24
+          -right-24
+          h-64
+          w-64
           rounded-full
           bg-purple-500/10
-          blur-[140px]
+          blur-[100px]
+
+          sm:-bottom-32
+          sm:-right-32
+          sm:h-80
+          sm:w-80
+          sm:blur-[120px]
+
+          md:-bottom-40
+          md:-right-40
+          md:h-[450px]
+          md:w-[450px]
+          md:blur-[140px]
         "
       />
+
 
       {/* =========================================
           FLOATING HEARTS
       ========================================= */}
 
-      <div className="pointer-events-none absolute inset-0 z-20">
-
+      <div className="pointer-events-none absolute inset-0 z-20 overflow-hidden">
         {hearts.map((heart) => (
           <span
             key={heart.id}
             className="
               absolute
+              select-none
               text-pink-400/40
               animate-bounce
             "
@@ -81,8 +106,8 @@ function SecondPage() {
             ♥
           </span>
         ))}
-
       </div>
+
 
       {/* =========================================
           MAIN IMAGE SECTION
@@ -97,8 +122,15 @@ function SecondPage() {
           justify-center
           px-3
           py-6
+
           sm:px-5
           sm:py-10
+
+          md:px-6
+          md:py-12
+
+          lg:px-8
+          lg:py-16
         "
       >
 
@@ -110,15 +142,24 @@ function SecondPage() {
           className="
             group
             relative
-            h-[88vh]
-            min-h-[650px]
+            h-[78vh]
+            min-h-[560px]
             w-full
             max-w-[1500px]
             overflow-hidden
-            rounded-[2rem]
+            rounded-[1.5rem]
             border
             border-white/10
-            shadow-[0_0_100px_rgba(236,72,153,0.20)]
+            shadow-[0_0_70px_rgba(236,72,153,0.18)]
+
+            sm:h-[82vh]
+            sm:min-h-[600px]
+            sm:rounded-[2rem]
+
+            md:h-[85vh]
+            md:min-h-[650px]
+
+            lg:h-[88vh]
           "
         >
 
@@ -127,21 +168,20 @@ function SecondPage() {
           ===================================== */}
 
           <img
-            src={Birthday}
+            src={Image5}
             alt="Beautiful Memory"
             className="
               h-full
               w-full
               object-cover
               object-center
-
               transition-all
               duration-[1500ms]
               ease-out
-
               group-hover:scale-110
             "
           />
+
 
           {/* =====================================
               DARK OVERLAY
@@ -153,15 +193,14 @@ function SecondPage() {
               inset-0
               bg-gradient-to-t
               from-black
-              via-black/25
+              via-black/30
               to-black/5
-
               transition
               duration-700
-
               group-hover:via-black/15
             "
           />
+
 
           {/* =====================================
               TOP TEXT
@@ -170,32 +209,39 @@ function SecondPage() {
           <div
             className="
               absolute
-              left-6
-              right-6
-              top-8
+              left-4
+              right-4
+              top-6
               text-center
 
-              sm:left-12
-              sm:right-12
-              sm:top-12
+              sm:left-8
+              sm:right-8
+              sm:top-10
+
+              md:left-12
+              md:right-12
+              md:top-12
             "
           >
-
             <p
               className="
-                text-xs
+                text-[9px]
                 font-semibold
                 uppercase
-                tracking-[0.5em]
+                tracking-[0.25em]
                 text-slate-900
 
-                sm:text-sm
+                sm:text-xs
+                sm:tracking-[0.4em]
+
+                md:text-sm
+                md:tracking-[0.5em]
               "
             >
               ✦ A Beautiful Moment ✦
             </p>
-
           </div>
+
 
           {/* =====================================
               CENTER CONTENT
@@ -208,13 +254,17 @@ function SecondPage() {
               flex
               items-center
               justify-center
-              px-6
+              px-5
               text-center
+
+              sm:px-8
+
+              md:px-12
             "
           >
-
             <div
               className="
+                w-full
                 max-w-4xl
                 transition-all
                 duration-700
@@ -226,66 +276,81 @@ function SecondPage() {
 
               <div
                 className="
-                  mb-6
-                  text-6xl
+                  mb-4
+                  text-5xl
                   transition
                   duration-700
                   group-hover:scale-125
 
-                  sm:text-7xl
+                  sm:mb-5
+                  sm:text-6xl
+
+                  md:mb-6
+                  md:text-7xl
                 "
               >
                 ❤️
               </div>
 
+
               {/* Heading */}
 
               <h1
                 className="
-                  text-5xl
+                  text-4xl
                   font-black
+                  leading-[1.05]
                   tracking-tight
                   text-white
                   drop-shadow-2xl
 
-                  sm:text-6xl
-                  md:text-7xl
-                  lg:text-8xl
+                  sm:text-5xl
+
+                  md:text-6xl
+
+                  lg:text-7xl
+
+                  xl:text-8xl
                 "
               >
                 Beautiful
 
-                <span
-                  className="
-                    block
-                    text-pink-400
-                  "
-                >
+                <span className="block text-pink-400">
                   Memories
                 </span>
               </h1>
+
 
               {/* Description */}
 
               <p
                 className="
                   mx-auto
-                  mt-6
-                  max-w-2xl
-                  text-base
-                  leading-7
+                  mt-4
+                  max-w-xl
+                  text-sm
+                  leading-6
                   text-white/70
 
-                  sm:text-lg
-                  md:text-xl
+                  sm:mt-5
+                  sm:text-base
+                  sm:leading-7
+
+                  md:mt-6
+                  md:max-w-2xl
+                  md:text-lg
+                  md:leading-8
+
+                  lg:text-xl
                 "
               >
-               
+                Every beautiful moment becomes a memory,
+                and some memories stay close to our hearts forever. ❤️
               </p>
 
             </div>
-
           </div>
+
 
           {/* =====================================
               BOTTOM CONTENT
@@ -294,37 +359,49 @@ function SecondPage() {
           <div
             className="
               absolute
-              bottom-7
-              left-6
-              right-6
+              bottom-5
+              left-4
+              right-4
               flex
               items-end
               justify-between
+              gap-4
 
-              sm:bottom-10
-              sm:left-12
-              sm:right-12
+              sm:bottom-8
+              sm:left-8
+              sm:right-8
+
+              md:bottom-10
+              md:left-12
+              md:right-12
             "
           >
 
-            <div>
+            {/* Message */}
+
+            <div className="min-w-0 flex-1">
 
               <p
                 className="
-                  text-xs
+                  text-[10px]
                   font-medium
-                  leading-7
+                  leading-5
                   tracking-wide
                   text-yellow-300
-                  text-justify
 
-                  sm:text-sm
-                  md:text-base
+                  sm:text-xs
+                  sm:leading-6
+
+                  md:text-sm
+                  md:leading-7
+
+                  lg:text-base
                 "
               >
                 Some people come into our lives
-                and quietly become a beautiful part of our heart.
-                You are one of those people for me. ❤️
+                and quietly become a beautiful part
+                of our heart. You are one of those
+                people for me. ❤️
 
                 <br />
                 <br />
@@ -339,18 +416,19 @@ function SecondPage() {
                 May your smile always stay the same,
                 may your dreams become reality,
                 and may every new chapter of your life
-                bring you closer to the happiness you seek
+                bring you closer to the happiness you seek.
               </p>
 
             </div>
+
 
             {/* Heart Button */}
 
             <div
               className="
                 flex
-                h-14
-                w-14
+                h-11
+                w-11
                 shrink-0
                 items-center
                 justify-center
@@ -358,7 +436,7 @@ function SecondPage() {
                 border
                 border-white/20
                 bg-black/40
-                text-2xl
+                text-xl
                 text-pink-400
                 backdrop-blur-md
                 transition-all
@@ -367,12 +445,20 @@ function SecondPage() {
                 group-hover:scale-110
                 group-hover:border-pink-400/50
                 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.4)]
+
+                sm:h-12
+                sm:w-12
+                sm:text-2xl
+
+                md:h-14
+                md:w-14
               "
             >
               ♥
             </div>
 
           </div>
+
 
           {/* =====================================
               IMAGE SHINE
@@ -388,10 +474,8 @@ function SecondPage() {
               from-transparent
               via-white/10
               to-transparent
-
               transition-transform
               duration-[1500ms]
-
               group-hover:translate-x-full
             "
           />
@@ -399,6 +483,7 @@ function SecondPage() {
         </div>
 
       </section>
+
 
       {/* =========================================
           BOTTOM MESSAGE
@@ -408,15 +493,23 @@ function SecondPage() {
         className="
           relative
           z-30
-          pb-10
+          px-4
+          pb-8
           text-center
+
+          sm:pb-10
         "
       >
+        <p
+          className="
+            text-xs
+            text-white/40
 
-        <p className="text-sm text-white/40">
+            sm:text-sm
+          "
+        >
           Keep smiling. Keep shining. ❤️
         </p>
-
       </div>
 
     </div>

@@ -1,32 +1,12 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navLinks = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "Memories",
-      path: "/memories",
-    },
-    {
-      name: "Moments",
-      path: "/moments",
-    },
-    {
-      name: "Birthday",
-      path: "/birthday",
-    },
-    
-     
-  ];
-
   const handleLinkClick = () => {
     setMenuOpen(false);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -43,7 +23,6 @@ function Navbar() {
         backdrop-blur-xl
       "
     >
-
       <div
         className="
           mx-auto
@@ -56,9 +35,7 @@ function Navbar() {
         "
       >
 
-        {/* =========================
-            LOGO
-        ========================= */}
+        {/* ================= LOGO ================= */}
 
         <Link
           to="/"
@@ -76,63 +53,89 @@ function Navbar() {
         </Link>
 
 
-        {/* =========================
-            DESKTOP NAVIGATION
-        ========================= */}
+        {/* ================= DESKTOP NAV ================= */}
 
         <div className="hidden items-center gap-8 md:flex">
 
-          {navLinks.map((link) => (
+          {/* HOME */}
 
-            <NavLink
-              key={link.name}
-              to={link.path}
-              onClick={handleLinkClick}
+          <Link
+            to="/"
+            onClick={handleLinkClick}
+            className="
+              text-sm
+              font-medium
+              text-white/70
+              transition
+              duration-300
+              hover:text-pink-400
+            "
+          >
+            Home
+          </Link>
 
-              className={({ isActive }) =>
-                `
-                relative
-                text-sm
-                font-medium
-                transition
-                duration-300
 
-                ${
-                  isActive
-                    ? "text-pink-400"
-                    : "text-white/70 hover:text-pink-400"
-                }
+          {/* MEMORIES */}
 
-                after:absolute
-                after:-bottom-2
-                after:left-0
-                after:h-[2px]
-                after:bg-pink-400
-                after:transition-all
-                after:duration-300
+          <a
+            href="/#memories"
+            onClick={handleLinkClick}
+            className="
+              text-sm
+              font-medium
+              text-white/70
+              transition
+              duration-300
+              hover:text-pink-400
+            "
+          >
+            Memories
+          </a>
 
-                ${
-                  isActive
-                    ? "after:w-full"
-                    : "after:w-0 hover:after:w-full"
-                }
-                `
-              }
-            >
-              {link.name}
-            </NavLink>
 
-          ))}
+          {/* MOMENTS - SEPARATE ROUTE */}
+
+          <Link
+            to="/moments"
+            onClick={handleLinkClick}
+            className="
+              text-sm
+              font-medium
+              text-white/70
+              transition
+              duration-300
+              hover:text-pink-400
+            "
+          >
+            Moments
+          </Link>
+
+
+          {/* BEAUTIFUL - SEPARATE ROUTE */}
+
+          <Link
+            to="/beautiful"
+            onClick={handleLinkClick}
+            className="
+              text-sm
+              font-medium
+              text-white/70
+              transition
+              duration-300
+              hover:text-pink-400
+            "
+          >
+            Beautiful ❤️
+          </Link>
 
         </div>
 
 
-        {/* =========================
-            GET STARTED
-        ========================= */}
+        {/* ================= GET STARTED ================= */}
 
         <Link
-          to="/contact"
+          to="/last"
+          onClick={handleLinkClick}
           className="
             hidden
             rounded-full
@@ -153,9 +156,7 @@ function Navbar() {
         </Link>
 
 
-        {/* =========================
-            MOBILE BUTTON
-        ========================= */}
+        {/* ================= MOBILE BUTTON ================= */}
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -180,12 +181,9 @@ function Navbar() {
       </div>
 
 
-      {/* =========================
-          MOBILE MENU
-      ========================= */}
+      {/* ================= MOBILE MENU ================= */}
 
       {menuOpen && (
-
         <div
           className="
             border-t
@@ -199,38 +197,93 @@ function Navbar() {
 
           <div className="flex flex-col gap-5">
 
-            {navLinks.map((link) => (
+            {/* HOME */}
 
-              <NavLink
-                key={link.name}
-                to={link.path}
-                onClick={handleLinkClick}
+            <Link
+              to="/"
+              onClick={handleLinkClick}
+              className="
+                border-b
+                border-white/10
+                pb-4
+                text-white/70
+                hover:text-pink-400
+              "
+            >
+              Home
+            </Link>
 
-                className={({ isActive }) =>
-                  `
-                  border-b
-                  border-white/10
-                  pb-4
-                  transition
-                  duration-300
 
-                  ${
-                    isActive
-                      ? "text-pink-400"
-                      : "text-white/70 hover:text-pink-400"
-                  }
-                  `
-                }
-              >
-                {link.name}
-              </NavLink>
+            {/* MEMORIES */}
 
-            ))}
+            <a
+              href="/#memories"
+              onClick={handleLinkClick}
+              className="
+                border-b
+                border-white/10
+                pb-4
+                text-white/70
+                hover:text-pink-400
+              "
+            >
+              Memories
+            </a>
+
+
+            {/* MOMENTS */}
+
+            <Link
+              to="/moments"
+              onClick={handleLinkClick}
+              className="
+                border-b
+                border-white/10
+                pb-4
+                text-white/70
+                hover:text-pink-400
+              "
+            >
+              Moments
+            </Link>
+
+
+            {/* BEAUTIFUL */}
+
+            <Link
+              to="/beautiful"
+              onClick={handleLinkClick}
+              className="
+                border-b
+                border-white/10
+                pb-4
+                text-white/70
+                hover:text-pink-400
+              "
+            >
+              Beautiful ❤️
+            </Link>
+
+
+            {/* LAST */}
+
+            <Link
+              to="/last"
+              onClick={handleLinkClick}
+              className="
+                border-b
+                border-white/10
+                pb-4
+                text-white/70
+                hover:text-pink-400
+              "
+            >
+              Get Started
+            </Link>
 
           </div>
 
         </div>
-
       )}
 
     </nav>
