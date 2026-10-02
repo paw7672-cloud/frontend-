@@ -88,16 +88,6 @@ function Moments() {
   };
 
   // =========================================================
-  // MOBILE TOUCH
-  // =========================================================
-
-  const handleFrontTouch = (event, index) => {
-    event.stopPropagation();
-
-    flipCard(index);
-  };
-
-  // =========================================================
   // BACK BUTTON
   // =========================================================
 
@@ -276,12 +266,10 @@ function Moments() {
                 ================================================= */}
 
                 <div
-                  onTouchStart={(event) =>
-                    handleFrontTouch(event, index)
-                  }
-                  onClick={(event) =>
-                    handleFrontTouch(event, index)
-                  }
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    flipCard(index);
+                  }}
                   className="
                     absolute
                     inset-0
@@ -512,9 +500,7 @@ function Moments() {
                   "
                 >
 
-                  {/* =================================================
-                      IMAGE
-                  ================================================= */}
+                  {/* IMAGE */}
 
                   <img
                     src={moment.image}
@@ -651,9 +637,7 @@ function Moments() {
                     </h3>
                   </div>
 
-                  {/* =================================================
-                      MOBILE BACK BUTTON
-                  ================================================= */}
+                  {/* MOBILE BACK BUTTON */}
 
                   <button
                     type="button"
@@ -776,6 +760,7 @@ function Moments() {
               text-white
               backdrop-blur-md
               transition
+              duration-300
               active:scale-90
               sm:right-6
               sm:top-6
