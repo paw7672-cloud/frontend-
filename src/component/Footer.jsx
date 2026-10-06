@@ -103,7 +103,7 @@ function Footer() {
           >
             My
             <span className="text-pink-400">
-              JAADU, SWEETHEART
+              JAADU, NITIKA PANDAY
             </span>
           </Link>
 
@@ -359,7 +359,7 @@ function Footer() {
             </h2>
 
 
-            {/* Sweetheart */}
+         
 
             <p
               className="
@@ -374,7 +374,7 @@ function Footer() {
                 md:text-lg
               "
             >
-              ❤️ MY JAADU, SWEETHEART
+              ❤️ MY JAADU, NITIKA
             </p>
 
 
